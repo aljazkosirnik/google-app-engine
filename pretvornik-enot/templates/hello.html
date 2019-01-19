@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Pretvornik enot</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>Pretvornik enot</h1>
+      {% if rezultat is not defined %}
+      <form action="" method="post">
+        <div id="stevilkadiv">
+          <input
+            type="number"
+            placeholder="Vnesi številko"
+            name="stevilka"
+            id="stevilka"
+          />
+          <select id="select1" name="select1">
+            <option value="cm1" id="cm1">Centimetrov</option>
+            <option value="km1" id="km1">Kilometrov</option>
+            <option value="inch1" id="inch1">Inchov</option>
+            <option value="mi1" id="mi1">Milj</option>
+          </select>
+          <span> v </span>
+          <select id="select2" name="select2">
+            <option value="inch2" id="inch2">Inche</option>
+            <option value="mi2" id="mi2">Milje</option>
+            <option value="cm2" id="cm2">Centimetre</option>
+            <option value="km2" id="km">Kilometre</option>
+          </select>
+        </div>
+        <button type="submit">Pretvori</button>
+      </form>
+      {% elif rezultat is defined%}
+        {% if error == False %}
+          <h1 class="rezultat">
+              {{ stevilka }} {{ izbira1 }} je {{ rezultat }} {{ izbira2 }}
+          </h1>
+          <button class="ponovitev">
+            <a href="/">Ali želiš pretvoriti še kaj?</a>
+          </button>
+        {% elif error == True %}
+          <h1 class="rezultat">Napaka, poskusil si pretvoriti dve enaki enoti</h1>
+          <button class="ponovitev">
+            <a href="/">Nazaj na začetno stran</a>
+          </button>
+        {% endif %}
+    </div>
+    {%endif%}
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(207, 207, 207);
+}
+
+#main {
+  text-align: center;
+  margin: 20% auto;
+}
+
+input {
+  width: 10%;
+  height: 20px;
+}
+
+select {
+  width: 6%;
+  height: 25px;
+}
+
+#stevilkadiv {
+  display: inline;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  height: 30px;
+  width: 100px;
+}
+
+.ponovitev {
+  height: 30px;
+  width: 200px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.rezultat {
+  font-size: 50px;
+}
